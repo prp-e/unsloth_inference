@@ -8,6 +8,7 @@ Then, I decided to make a code base where people with a little bit of change in 
 
 - To my knowledge, Python 3.11+ is the best way of running unsloth. 
 - If you want another model for inference, just change `model_name` in `main.py` code manually. I personally prefer what unsloth share on [their huggingface account](https://hf.co/unsloth) and if you're going to load them in 4 bits, go for the ones with `bnb-4bit` in the name. 
+- Unsloth is relying on `triton` package and it only works with Linux. So if you are like me and want to run the code on a windows machine, just use WSL.
 
 ## The hardware
 
