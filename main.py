@@ -28,5 +28,5 @@ add_generation_prompt = True
 print(tokenized_text)
 
 tokenized_text = tokenizer(tokenized_text, return_tensors="pt").to("cuda")
-print("The tokenizer makes your input like:")
-print(tokenized_text)
+# print("The tokenizer makes your input like:")
+# print(tokenized_text)
