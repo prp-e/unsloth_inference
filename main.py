@@ -30,3 +30,12 @@ print(tokenized_text)
 tokenized_text = tokenizer(tokenized_text, return_tensors="pt").to("cuda")
 # print("The tokenizer makes your input like:")
 # print(tokenized_text)
+
+then = datetime.now()
+generated_text = model.generate(**tokenized_text, max_new_tokens=1024)
+result = tokenizer.decode(generated_text[0][len(model_inputs.input_ids[0]):].tolist(), skip_special_tokens=True)
+now = datetime.now()
+
+generate_time = then - now 
+print(result)
+print(f"\nTook {generate_time} seconds.")
