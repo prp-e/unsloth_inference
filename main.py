@@ -7,3 +7,5 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     model_name= model_name,
     load_in_4bit = True
 )
+
+print(f"Model is loaded on {model.device}")
