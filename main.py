@@ -36,6 +36,6 @@ generated_text = model.generate(**tokenized_text, max_new_tokens=1024)
 result = tokenizer.decode(generated_text[0][len(tokenized_text.input_ids[0]):].tolist(), skip_special_tokens=True)
 now = datetime.now()
 
-generate_time = then - now 
+generate_time = now - then
 print(result)
 print(f"\nTook {generate_time} seconds.")
