@@ -33,7 +33,7 @@ tokenized_text = tokenizer(tokenized_text, return_tensors="pt").to("cuda")
 
 then = datetime.now()
 generated_text = model.generate(**tokenized_text, max_new_tokens=1024)
-result = tokenizer.decode(generated_text[0][len(model_inputs.input_ids[0]):].tolist(), skip_special_tokens=True)
+result = tokenizer.decode(generated_text[0][len(tokenized_text.input_ids[0]):].tolist(), skip_special_tokens=True)
 now = datetime.now()
 
 generate_time = then - now 
